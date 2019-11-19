@@ -1,0 +1,43 @@
+@import "bootstrap/scss/bootstrap";
+
+.card {
+  transition: .3s;
+  &:hover {
+    background-color: #f5f5f5;
+    box-shadow: 0rem 0rem .25rem tomato;
+    cursor: pointer;
+  }
+  .card-img-overlay {
+    &--varian-1 {
+      top: auto;
+      right: 50%;
+      bottom: 0;
+      left: 0;
+      @media (max-width: 720px) {
+        right: 0;
+        left: 0;
+      }
+    }
+  }
+}
+
+.img-placeholder {
+  width: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: none;
+  background-size: cover;
+  background-color: thistle;
+  &--varian-1 {
+    height: 70vh;
+    max-height: 500px;
+  }
+  &--varian-2 {
+    height: 40vh;
+    max-height: 250px;
+  }
+  &--varian-3 {
+    width: 5rem;
+    height: 5rem;
+  }
+}
