@@ -1,0 +1,33 @@
+<h5 class="mb-3">Latest <span class="text-muted">Twelve</span></h5>
+<div class="row">
+  {%- for post in site.posts -%}
+  <div class="col-lg-6 col-xl-4 mb-4">
+    <div class="card">
+      {%- if post.image == ""-%}
+      <div class="img-placeholder img-placeholder--varian-2" 
+           style="background-image: url('https://source.unsplash.com/{{ post.image }}');">
+      </div>
+      {%- else -%}
+      <div class="img-placeholder img-placeholder--varian-2"
+           style="background-color: {{ post.color }};">
+      </div>
+      {%- endif -%}
+      <div class="card-body">
+        <h4 class="card-title mb-4">
+          <a class="text-dark" href="{{ post.url | relative_url }}">
+            {{ post.title }}
+          </a>
+        </h4>
+        <div class="d-flex justify-content-between">
+          <span class="badge badge-danger text-uppercase p-1">
+            {{ post.tags[0] }}
+          </span>
+          <h6 class="card-subtitle text-muted mb-0 p-1">
+            {{ post.date | date: "%d %b, %Y" }}
+          </h6>
+        </div>
+      </div>
+    </div>
+  </div>
+  {%- endfor -%}
+</div>

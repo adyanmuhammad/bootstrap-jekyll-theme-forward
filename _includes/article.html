@@ -1,0 +1,14 @@
+<span class="badge badge-danger text-uppercase p-1 mb-2">
+Travel
+</span>
+<h3>
+{{ page.title }}
+</h3>
+<time class="d-block text-muted mb-3">
+{{ page.date | date: "%d %b, %Y" }}
+</time>
+<div class="img-placeholder img-placeholder--varian-1 mb-5" 
+     style="background-image: url('{{ page.image | relative_url }}');">
+</div>
+
+{{ content }}
