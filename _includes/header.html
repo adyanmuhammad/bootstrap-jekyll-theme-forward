@@ -3,7 +3,7 @@
     <div class="col">
       {%- for post in site.categories.headline limit: 1 -%}
       <div class="card">
-        {%- if post.image == ""-%}
+        {%- if post.image -%}
         <div class="rounded img-placeholder img-placeholder--varian-1" 
              style="background-image: url('https://source.unsplash.com/{{ post.image }}');">
         </div>
